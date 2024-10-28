@@ -29,10 +29,11 @@ main {
 
 /* Seção 1 - Imagem de fundo na página principal */
 #section_1 {
-    background: url(assets/imgprincipal.jpg) no-repeat center top; /* Imagem de fundo */
+    background: url(assets/imgprincipal.jpg) no-repeat; /* Imagem de fundo */
     background-size: cover; /* Faz com que a imagem cubra toda a área */
-    height: 600px; /* Altura da seção */
+    height: 700px; /* Altura da seção */
     width: 100%; /* Largura total da tela */
+    background-position: center -100px; /* Move a imagem 50 pixels para cima do centro */
 }
 
 /* Seção 2 - Layout de três colunas */
