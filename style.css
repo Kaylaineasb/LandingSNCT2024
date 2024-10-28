@@ -1,0 +1,171 @@
+/* Reset básico para garantir consistência entre navegadores */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Itim", cursive;
+}
+
+/* Barra de navegação */
+nav {
+    background-color: #E80000; /* Define a cor de fundo da barra */
+    height: 30px;
+    display: flex;
+    justify-content: flex-end; /* Alinha os links à direita */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+}
+
+nav a {
+    color: #fff; /* Cor dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    margin: 0 10px; /* Espaçamento entre os links */
+    text-transform: uppercase; /* Deixa o texto em letras maiúsculas */
+}
+
+/* Área principal (container) */
+main {
+    height: auto; /* Define a altura automática para se ajustar ao conteúdo */
+}
+
+/* Seção 1 - Imagem de fundo na página principal */
+#section_1 {
+    background: url(assets/imgprincipal.jpg) no-repeat center top; /* Imagem de fundo */
+    background-size: cover; /* Faz com que a imagem cubra toda a área */
+    height: 600px; /* Altura da seção */
+    width: 100%; /* Largura total da tela */
+}
+
+/* Seção 2 - Layout de três colunas */
+#section_2 {
+    position: relative;
+    height: 600px; /* Altura da seção */
+    background-color: #f0f0f0; /* Cor de fundo clara */
+    padding: 20px 0; /* Espaçamento interno */
+    text-align: center; /* Alinha o texto ao centro */
+    color: #000; /* Cor do texto */
+    display: flex; /* Define o layout em colunas (flex) */
+    justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+    align-items: flex-start; /* Alinha o conteúdo no topo */
+    margin: 0; /* Remove margens externas */
+}
+
+/* Estilos das colunas laterais */
+#left, #right {
+    width: 20%; /* Cada coluna lateral ocupa 20% da largura */
+    padding: 10px; /* Espaçamento interno */
+    display: flex;
+    flex-direction: column; /* Os itens ficam um embaixo do outro */
+    justify-content: space-between; /* Espaça os itens para usar a altura total */
+    height: 100%;
+}
+
+#left img, #right img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do container */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+#left p {
+    text-align: center; /* Centraliza o texto nas colunas laterais */
+    margin: 10px 0; /* Espaçamento ao redor do texto */
+}
+
+/* Centraliza a coluna do meio (principal) */
+#center {
+    width: 60%; /* A coluna central ocupa 60% da largura */
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+#center h1 {
+    font-size: 40px; /* Tamanho do título */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+/* Layout dos personagens (seção de elenco) */
+.characters {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os personagens se quebrem em várias linhas */
+    justify-content: center; /* Centraliza os personagens na tela */
+    gap: 20px; /* Espaçamento entre os personagens */
+    margin-top: 90px; /* Espaçamento superior da seção de personagens */
+}
+
+.character {
+    display: flex;
+    flex-direction: column; /* Coloca a imagem e o nome em uma coluna vertical */
+    align-items: center; /* Centraliza os itens verticalmente */
+    text-align: center;
+    flex-basis: calc(25% - 20px); /* Cada personagem ocupa 25% da largura, menos o gap */
+}
+
+.character img {
+    width: 100px; /* Define o tamanho da imagem */
+    height: 100px;
+    border-radius: 50%; /* Faz a imagem ficar circular */
+    object-fit: cover; /* Garante que a imagem cubra o círculo sem distorções */
+    transition: transform 0.3s ease; /* Transição suave para o efeito de hover */
+}
+
+.character p {
+    margin-top: 10px; /* Espaçamento entre a imagem e o nome */
+    font-size: 16px; /* Tamanho da fonte do nome */
+}
+
+/* Efeito de hover para aumentar as imagens dos personagens e links do nav */
+.character img:hover, nav a:hover {
+    transform: scale(1.1); /* Aumenta a imagem em 10% ao passar o mouse */
+}
+
+/* Seção 3 - Formulário */
+#section_3 {
+    display: flex;
+    justify-content: space-around; /* Espaça igualmente os itens no layout */
+    padding: 50px; /* Espaçamento interno da seção */
+    background-color: #E80000; /* Cor de fundo */
+    height: 400px; /* Altura da seção */
+}
+
+#logo {
+    color: #fff; /* Cor do texto do logo */
+    text-align: center; /* Centraliza o texto */
+}
+
+#forms {
+    background-color: #fff; /* Fundo branco para o formulário */
+    padding: 40px; /* Espaçamento interno */
+}
+
+#forms h2 {
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+/* Layout dos campos de formulário */
+#forms div {
+    display: flex;
+    flex-direction: column; /* Coloca a label e o input em coluna */
+    align-items: flex-start; /* Alinha os itens à esquerda */
+}
+
+#forms label {
+    margin-bottom: 5px; /* Espaçamento entre a label e o campo de input */
+}
+
+#forms input {
+    margin-bottom: 20px; /* Espaçamento entre os campos de input */
+    background-color: #f0f0f0; /* Cor de fundo dos campos */
+    border: none; /* Remove as bordas */
+    width: 200px; /* Largura dos campos */
+}
+
+#forms button {
+    text-transform: uppercase; /* Deixa o texto do botão em letras maiúsculas */
+    align-self: center; /* Centraliza o botão */
+    border: none; /* Remove a borda do botão */
+    background-color: #f0f0f0; /* Cor de fundo do botão */
+    width: 100px; /* Largura do botão */
+    height: 30px; /* Altura do botão */
+    border-radius: 10px; /* Arredonda os cantos do botão */
+    cursor: pointer; /* Define o cursor como pointer (mãozinha) */
+    margin-top: 10px; /* Espaçamento superior do botão */
+}
